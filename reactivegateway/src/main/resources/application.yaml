@@ -6,6 +6,8 @@ spring:
           uri: http://localhost:8081
           predicates:
             - Path=/hello
+      httpclient:
+        connect-timeout: 3
 logging:
   level:
     root: debug

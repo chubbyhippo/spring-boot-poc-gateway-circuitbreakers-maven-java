@@ -16,6 +16,8 @@ spring:
             - Path=/error
       httpclient:
         response-timeout: 2s
+        max-header-size: 1GB
+
 logging:
   level:
     root: debug

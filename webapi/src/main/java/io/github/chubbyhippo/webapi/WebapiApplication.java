@@ -20,17 +20,22 @@ public class WebapiApplication {
 class HelloController {
     @GetMapping("/hello")
     String getHello() {
-        return "Hello World";
+        return "Hello!";
     }
 
     @GetMapping("/delayedhello")
     String getDelayedHello() throws InterruptedException {
         Thread.sleep(Duration.ofSeconds(5));
-        return "Hello World from delayed";
+        return "Hello! from delayed";
     }
 
     @GetMapping("/error")
     String getErroredHello() {
         throw new IllegalStateException("error");
+    }
+
+    @GetMapping("/fallback")
+    String getFallbackHello() {
+        return "Hello! from fallback";
     }
 }

@@ -15,10 +15,6 @@ spring:
               args:
                 name: helloCircuitBreaker
                 fallbackUri: forward:/fallback
-        - id: error
-          uri: http://localhost:8081
-          predicates:
-            - Path=/error
         - id: fallback_route
           uri: http://localhost:8081
           predicates:

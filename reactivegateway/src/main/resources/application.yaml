@@ -44,6 +44,7 @@ resilience4j:
     instances:
       helloCircuitBreaker:
         base-config: default
+
 #  timelimiter:
 #    configs:
 #      default:

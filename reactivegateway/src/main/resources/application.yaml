@@ -15,10 +15,10 @@ spring:
               args:
                 name: helloCircuitBreaker
                 fallbackUri: forward:/fallback
-        - id: fallback_route
-          uri: http://localhost:8081
-          predicates:
-            - Path=/fallback
+#        - id: fallback_route
+#          uri: http://localhost:8081
+#          predicates:
+#            - Path=/fallback
       httpclient:
         response-timeout: 2s
         max-header-size: 1GB

@@ -17,7 +17,7 @@ repositories {
 	mavenCentral()
 }
 
-extra["springCloudVersion"] = "2023.0.2"
+extra["springCloudVersion"] = "2023.0.5"
 
 dependencies {
 	implementation("org.springframework.cloud:spring-cloud-starter-gateway")

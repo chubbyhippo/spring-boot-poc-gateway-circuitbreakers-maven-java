@@ -36,15 +36,14 @@ management:
       exposure:
         include: circuitbreakers
 
-resilience4j:
-  circuitbreaker:
-    configs:
-      default:
-        sliding-window-size: 10
-    instances:
-      helloCircuitBreaker:
-        base-config: default
-
+#resilience4j:
+#  circuitbreaker:
+#    configs:
+#      default:
+#        sliding-window-size: 10
+#    instances:
+#      helloCircuitBreaker:
+#        base-config: default
 #  timelimiter:
 #    configs:
 #      default:

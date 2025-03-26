@@ -26,7 +26,7 @@ class HelloController {
     @GetMapping("/delayedhello")
     String getDelayedHello() throws InterruptedException {
         Thread.sleep(Duration.ofSeconds(5));
-        return "Hello World";
+        return "Hello World from delayed";
     }
 
     @GetMapping("/error")

@@ -22,3 +22,10 @@ spring:
       httpclient:
         response-timeout: 2s
         max-header-size: 1GB
+#        wiretap: true
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty.http.client: DEBUG
+    io.github.resilience4j.circuitbreaker: DEBUG
+

@@ -13,16 +13,11 @@ spring:
           filters:
             - name: CircuitBreaker
               args:
-                name: helloCircuitBreaker
                 fallbackUri: forward:/fallback
 #        - id: fallback_route
 #          uri: http://localhost:8081
 #          predicates:
 #            - Path=/fallback
-      httpclient:
-        response-timeout: 2s
-        max-header-size: 1GB
-        wiretap: true
 
 logging:
   level:
@@ -36,15 +31,8 @@ management:
       exposure:
         include: circuitbreakers
 
-#resilience4j:
-#  circuitbreaker:
-#    configs:
-#      default:
-#        sliding-window-size: 10
-#    instances:
-#      helloCircuitBreaker:
-#        base-config: default
-#  timelimiter:
-#    configs:
-#      default:
-#        timeout-duration: 2s
+resilience4j:
+  timelimiter:
+    configs:
+      default:
+        timeout-duration: 2s

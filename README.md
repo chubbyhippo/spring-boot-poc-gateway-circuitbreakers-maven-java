@@ -5,3 +5,6 @@
     webapi --> webproxy
     webproxy ---> reactivegateway
 ```
+```shell
+./gradlew bootRun --parallel
+```
